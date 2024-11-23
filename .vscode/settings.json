@@ -14,5 +14,7 @@
       "name": "tarefas_db"
     }
   ],
-  "cSpell.words": ["caso", "facilita", "Limpar"]
+  "cSpell.words": ["caso", "facilita", "Limpar"],
+  "editor.formatOnSave": true
+  
 }

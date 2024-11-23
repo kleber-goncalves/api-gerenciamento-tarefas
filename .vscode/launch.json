@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Depuração para o Chrome em localhost
+      "type": "chrome",
+      "request": "launch",
+      "name": "Iniciar o Chrome em relação a localhost",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      // Depuração para o SWA (Aplicativo Web Estático) usando Chrome
+      "type": "chrome", // Corrigido de pwa-chrome para chrome
+      "request": "launch",
+      "name": "SWA: Run frontend-tarefas",
+      "url": "http://localhost:4280",
+      "preLaunchTask": "swa: start frontend-tarefas",
+      "webRoot": "${workspaceFolder}/frontend-tarefas",
+      "timeout": 30000
+    },
+    {
+      // Depuração para Node.js
+      "type": "node",
+      "request": "launch",
+      "name": "Depurar Node.js Backend",
+      "program": "${workspaceFolder}/src/app.js", // Caminho correto do seu arquivo principal
+      "cwd": "${workspaceFolder}",
+      "outFiles": ["${workspaceFolder}/**/*.js"],
+      "runtimeExecutable": "node",
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
